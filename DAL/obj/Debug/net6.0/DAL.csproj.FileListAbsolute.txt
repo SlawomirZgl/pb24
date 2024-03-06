@@ -1,0 +1,17 @@
+C:\Users\student\Desktop\pb2\pb24\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\student\Desktop\pb2\pb24\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\student\Desktop\pb2\pb24\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\student\Desktop\pb2\pb24\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\student\Desktop\pb2\pb24\DAL\bin\Debug\net6.0\Model.dll
+C:\Users\student\Desktop\pb2\pb24\DAL\bin\Debug\net6.0\Model.pdb
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+C:\Users\student\Desktop\pb2\pb24\DAL\obj\Debug\net6.0\ref\DAL.dll
