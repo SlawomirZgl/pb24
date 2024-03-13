@@ -16,7 +16,6 @@ namespace BLL.ServiceInterfaces
         bool AddNewProduct(ProductAddRequestDTO productDTO);
 
         bool DeactivateProduct(int id);
-        bool DeleteProduct(int id);
         bool ActivateProduct(int id);
     }
 }

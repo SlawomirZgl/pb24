@@ -8,11 +8,11 @@ namespace BLL.DTOModels
 {
     public class ProductListRequestDTO
     {
-        string? sortBy { get; init; }
-        bool? sortAscending { get; init; }
-        bool? getNotActive { get; init; }
-        string? filterByName { get; init; }
-        string? filterByGroupName { get;init; }
-        string? filterByGroupId { get; init; }
+        public string? orderBy { get; init; }
+        public bool? orderAscending { get; init; }
+        public bool? getNotActive { get; init; }
+        public string? filterByName { get; init; }
+        public string? filterByGroupName { get; init; }
+        public string? filterByGroupId { get; init; }
     }
 }
