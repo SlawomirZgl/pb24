@@ -11,7 +11,7 @@ namespace BLL.ServiceInterfaces
     public interface IProductsService
     {
 
-        IEnumerable<ProductsListResponseDTO> GetProductsList(string sortBy, bool sortAscending, bool getNotActive = false);
+        IEnumerable<ProductsListResponseDTO> GetProductsList(ProductListRequestDTO productDTO);
 
         bool AddNewProduct(ProductAddRequestDTO productDTO);
 
