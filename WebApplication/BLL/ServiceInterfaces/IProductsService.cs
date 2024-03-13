@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL.ServiceInterfaces
 {
-    internal interface IProductsService
+    public interface IProductsService
     {
 
         IEnumerable<ProductsListResponseDTO> GetProductsList(string sortBy, bool sortAscending, bool getNotActive = false);

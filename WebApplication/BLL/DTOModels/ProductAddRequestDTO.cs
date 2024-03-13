@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOModels
 {
-    internal class ProductAddRequestDTO
+    public class ProductAddRequestDTO
     {
         public string Name { get; init; }
         public double Price { get; init; }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace BLL.ServiceInterfaces
 {
-    internal interface IOrderService
+    public interface IOrderService
     {
 
-        OrderGeneratedResponseDTO generateOrder(int userId);
+        OrderGeneratedResponseDTO GenerateOrder(int userId);
 
-        bool PayForOrder(double amount);
+        bool PayForOrder(double value);
     }
 }

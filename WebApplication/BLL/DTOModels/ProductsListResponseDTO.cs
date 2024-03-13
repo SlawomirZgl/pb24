@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOModels
 {
-    internal class ProductsListResponseDTO
+    public class ProductsListResponseDTO
     {
         public int Id { get; init; }
         public string Name { get; init; }

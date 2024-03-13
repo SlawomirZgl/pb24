@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.ServiceInterfaces
 {
-    internal interface IBasketService
+    public interface IBasketService
     {
         //bool GenerateBasketPosition(int productId, int userId);
         bool GenerateBasketPosition(BasketAddRequestDTO basketDTO);

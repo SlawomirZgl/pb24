@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOModels
 {
-    internal class OrderGeneratedResponseDTO
+    public class OrderGeneratedResponseDTO
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
-        public DateTime Date { get; set; }
-        public ICollection<OrderPosition> OrderPositions { get; set; }
+        public int Id { get; init; }
+        public int UserId { get; init; }
+        public ICollection<OrderPositionResponseDTO> OrderPositions { get; init; }
     }
 }
