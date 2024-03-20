@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BLL_EF
 {
-    internal class BasketService : IBasketService
+    public class BasketService : IBasketService
     {
         private readonly IWebShopRepo webShop;
         public BasketService(IWebShopRepo webShop)
@@ -19,19 +19,24 @@ namespace BLL_EF
         }
         public bool ChangeAmountOfProductsInBasket(int basketPositionId, int amount)
         {
-            throw new NotImplementedException();
+            if (amount > 0)
+            {
+                webShop.GetBasketPositiontById(basketPositionId).Amount = amount;
+                webShop.ContextSaveChanges();
+            }
+            return false;
         }
 
         public bool DeleteBasketPosition(int basketPositionId)
         {
-            throw new NotImplementedException();
+            return webShop.DeleteBasketPosition(basketPositionId);
         }
 
         public bool GenerateBasketPosition(BasketAddRequestDTO basketDTO)
         {
             var basketPosition = new BasketPosition
             {
-                Id = 12,
+                Id = webShop.GetBasketPositions().Max(p => p.Id) + 1,
                 ProductId = basketDTO.ProductId,
                 UserId = basketDTO.UserId,
                 Amount = basketDTO.Amount,

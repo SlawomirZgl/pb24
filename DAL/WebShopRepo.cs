@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class WebShopRepo : IWebShopRepo
+    public class WebShopRepo : IWebShopRepo
     {
 
         private WebShopContext _context;
@@ -48,12 +48,12 @@ namespace DAL
 
         public ProductGroup GetGroupById(int? groupId)
         {
-            return _context.ProductGroups.First(pg => pg.Id == groupId);
+            return _context.ProductGroups.FirstOrDefault(pg => pg.Id == groupId);
         }
 
         public Product GetProductById(int id)
         {
-            return _context.Products.Find(id);
+            return _context.Products.FirstOrDefault(p => p.Id == id);
         }
 
         public bool DeleteProduct(int id)
@@ -84,7 +84,63 @@ namespace DAL
 
         public User GetUserById(int userId)
         {
-            return _context.Users.Find(userId);
+            return _context.Users.FirstOrDefault(p => p.Id == userId);
+        }
+
+        public IEnumerable<BasketPosition> GetBasketPositions()
+        {
+            return _context.BasketPositions.ToList();
+        }
+
+        public bool DeleteBasketPosition(int id)
+        {
+            bool success = _context.BasketPositions.Remove(GetBasketPositiontById(id)) != null;
+
+            _context.SaveChanges();
+
+            return success;
+        }
+
+        public BasketPosition GetBasketPositiontById(int id)
+        {
+            return _context.BasketPositions.FirstOrDefault(p => p.Id == id);
+        }
+
+        public bool AddOrder(Order order)
+        {
+            bool success = _context.Orders.Add(order) != null;
+            _context.SaveChanges();
+            return success;
+        }
+
+        public double getPriceOfProduct(int id)
+        {
+            var product = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (product != null)
+            {
+                return product.Price;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public bool AddOrderPositions(OrderPosition orderPosition)
+        {
+            bool success = _context.OrderPositions.Add(orderPosition) != null;
+            return success;
+        }
+
+        public void RemoveRangeBasketPositions(IEnumerable<BasketPosition> basketPositions)
+        {
+            _context.BasketPositions.RemoveRange(basketPositions);
+            _context.SaveChanges();
+        }
+
+        public IEnumerable<OrderPosition> GetAllOrderPositionsForOrder(int orderId)
+        {
+            return _context.OrderPositions.Where(op => op.OrderId == orderId).ToList();
         }
     }
 }

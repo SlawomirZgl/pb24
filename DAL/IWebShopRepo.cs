@@ -23,9 +23,20 @@ namespace DAL
 
         // Order functions
         Order GetOrderByUserId(int userId);
+        bool AddOrder(Order order);
+
+        // OrderPosition functions
+        bool AddOrderPositions(OrderPosition orderPosition);
+        public IEnumerable<OrderPosition> GetAllOrderPositionsForOrder(int orderId);
+
 
         // Basket functions
         bool AddBasketPosition(BasketPosition basketPosition);
+        IEnumerable<BasketPosition> GetBasketPositions();
+        bool DeleteBasketPosition(int id);
+        BasketPosition GetBasketPositiontById(int id);
+        double getPriceOfProduct(int id);
+        void RemoveRangeBasketPositions(IEnumerable<BasketPosition> basketPositions);
 
         // User functions
         User GetUserById(int userId);
