@@ -5,11 +5,11 @@ using Model.Model;
 
 namespace BLL_EF
 {
-    public class ProdutsService : IProductsService
+    public class ProductService : IProductsService
     {
         private readonly IWebShopRepo webShop;
 
-        public ProdutsService(IWebShopRepo webShop)
+        public ProductService(IWebShopRepo webShop)
         {
             this.webShop = webShop;
         }

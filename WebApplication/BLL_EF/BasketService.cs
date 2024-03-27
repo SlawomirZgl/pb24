@@ -23,6 +23,7 @@ namespace BLL_EF
             {
                 webShop.GetBasketPositiontById(basketPositionId).Amount = amount;
                 webShop.ContextSaveChanges();
+                return true;
             }
             return false;
         }
@@ -36,7 +37,7 @@ namespace BLL_EF
         {
             var basketPosition = new BasketPosition
             {
-                Id = webShop.GetBasketPositions().Max(p => p.Id) + 1,
+               
                 ProductId = basketDTO.ProductId,
                 UserId = basketDTO.UserId,
                 Amount = basketDTO.Amount,

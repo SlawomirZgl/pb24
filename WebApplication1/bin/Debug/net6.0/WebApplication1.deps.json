@@ -2513,7 +2513,8 @@
       },
       "BLL_DB/1.0.0": {
         "dependencies": {
-          "BLL": "1.0.0"
+          "BLL": "1.0.0",
+          "DAL": "1.0.0"
         },
         "runtime": {
           "BLL_DB.dll": {}

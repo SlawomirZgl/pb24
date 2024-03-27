@@ -326,6 +326,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\pb24\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\pb24\\DAL\\DAL.csproj"
+              },
               "D:\\pb24\\WebApplication\\BLL\\BLL.csproj": {
                 "projectPath": "D:\\pb24\\WebApplication\\BLL\\BLL.csproj"
               }

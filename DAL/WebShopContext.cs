@@ -18,10 +18,16 @@ namespace DAL
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderPosition> OrderPositions { get; set; }
 
+        public readonly string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Shop2;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Shop2;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            optionsBuilder.UseSqlServer(connectionString);
             //optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Shop;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           // modelBuilder.
         }
     }
 }
